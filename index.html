@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="Assets/style.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+  <header>
+    <h1>Weather Prediction</h1>
+  </header>
+
+  <div class="menuContainer">
+    <aside class="side-menu">
+        <h2>Search for a City</h2>
+            <div clas="formInput"></div>
+                <form id="CityInput">
+                    <input></input>
+                </form>
+                <button type="submit" class="btn-search">Search</button>
+            <div id="buttonHistory"></div>
+    </aside>
+
+    <section class="weatherToday">
+      <div class="city-date">
+        <h3>Today's Weather</h3>
+            <div class="row">
+                <div class="todayContainer"></div>
+                <h4 id="searchedCity"></h4>
+                <h5 id="todayDate"></h5>
+                <p>WeatherCondition</p>
+                <p>Temp</p>
+                <p>Humdity</p>
+                <p>Wind Speed</p>        
+            </div>
+<!---Break-->
+      <div class="fivedayContainer" id="fivedayForecast"> 
+        <h4>Current 5-Day Forecast</h4>
+        <div class="row">
+            <div>
+                <h5 id="day1"></h5>
+                <p>Temp</p>
+                <p>Wind</p>
+                <p>Humidity</p>
+            </div>
+            <div>
+                <h5 id="day2"></h5>
+                <p>Temp</p>
+                <p>Wind</p>
+                <p>Humidity</p>
+            </div>
+            <div>
+                <h5 id="day3"></h5>
+                <p>Temp</p>
+                <p>Wind</p>
+                <p>Humidity</p>
+            </div>
+            <div>
+                <h5 id="day4"></h5>
+                <p>Temp</p>
+                <p>Wind</p>
+                <p>Humidity</p>
+            </div>
+            <div>
+                <h5 id="day5"></h5>
+                <p>Temp</p>
+                <p>Wind</p>
+                <p>Humidity</p>
+            </div>
+        </div>
+        
+      </div>
+    </section>
+  </div>
+
+  <script src="Assets/script.js"></script>
+</body>
+
+</html>
