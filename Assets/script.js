@@ -1,17 +1,20 @@
+var cityEl = document.querySelector("#city");
+var cities = [];
+var weatherTodayEl = document.querySelector(".weatherToday");
+var fivedayForecastEl = document.querySelector("#fivedayForecast");
+var buttonHistoryEl = 
+var apiKey? = 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+// API
+var getWeather = function (city) {
+    get apiUrl = "" + city + ""
+        fetch(apiUrl)
+            .then(function (response) {
+                response.json().then(function (data) {
+                    displaysWeather(data, city);
+            });
+}
 
 
 
