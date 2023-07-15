@@ -8,7 +8,7 @@ Here is a preview of how the weather dashboard should look like!
 ![Website](Assets/images/Screenshot%202023-07-14%20232349.png)
 
 Click the link below to be prompted to the application!
-![]()
+![Link](https://joellongaresjr.github.io/avatar-ang/)
 
 # Usage
 Instruction are fairly simple! The user must provide a city in the form and click submit! Thus the user will be prompted the current weather conditions of the specified city and the fiveday forecast.
