@@ -1,46 +1,33 @@
-var cityEl = document.querySelector("#city");
-var cities = [];
-var weatherTodayEl = document.querySelector(".weatherToday");
-var fivedayForecastEl = document.querySelector("#fivedayForecast");
-var buttonHistoryEl = 
-var apiKey? = 
+var APIKey = "7497efd9974dcf73e4af19d08348e856";
+var searchInput = document.querySelector("#search-input");
+var searchButton = document.querySelector("#search-button");
+var currentWeather = document.querySelector("#currentWeatherDisplay");
+var fiveDayDisplay = document.querySelector("#fiveday-forecast");
+var searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
 
 
-// API
-var getWeather = function (city) {
-    get apiUrl = "" + city + ""
-        fetch(apiUrl)
-            .then(function (response) {
-                response.json().then(function (data) {
-                    displaysWeather(data, city);
-            });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var city; // var city = document.getElementById("#city-list"); 
+var cities = []; 
+var currentCity = dayjs().format("MM/DD/YYYY");
+function getWeather(city) {
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+    fetch(queryURL)
+      .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+        });
+        //     var cityName = data.name;
+        //     var icon = data.weather[0].icon;
+        //     var temp = data.main.temp;
+        //     var humidity = data.main.humidity;
+        //     var windSpeed = data.wind.speed;
+        //     var uvIndex = data.uvi;
+        //     // var lat = data.coord.lat;
+        //     // var lon = data.coord.lon;
+        // }
+};
 /// Creating a weather dashboard with a 5-day forecast
 //Step 1: Identify what is being asked
     // We want current and future conditions for a city added search history (localStorage)
@@ -54,7 +41,7 @@ var getWeather = function (city) {
     // HTML 
         // Header 
         // A (side)menu 
-            // Form - Input Build, Title,Button
+            // Form - Input Build,Button
             // Have a div for placing our seach history (list)
         // Container
             // 2 Children 
@@ -96,5 +83,3 @@ var getWeather = function (city) {
         // Create function that will handle the search input 
     // EventListener 
         // onClick call function that will handle search input
-        
-    

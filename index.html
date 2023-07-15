@@ -5,42 +5,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather Dashboard</title>
-  <link rel="stylesheet" href="Assets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="Assets/css/style.css">
 </head>
 
 <body>
   <header>
-    <h1>Weather Prediction</h1>
+    <h1 style="background-color: powderblue; ">Weather Dashboard</h1>
   </header>
 
-<div class="row">
-  <aside class="side-menu">
+<div class="sideContainer"></div>
+  <div class="side-menu">
       <h2>Search for a City</h2>
         <form>
-          <input id="city-name"></input>
+          <input id="search-input"></input>
         </form>
-      <button id="search-btn">Search</button>
-        <div class="city-list">
-          <button id="history-btn" class="searchedCity"></button>
+      <button id="search-button" type="button">Search</button>
+            <p></p>
+          <button id="history-button"></button>
+          <div id="history"></div>
+            <p></p>
         </div>
     </aside>
   </div>
 
-<div class="wrap">
-  <section class="currentWeather">
-    <h2 id="weather">Current Weather</h2>
-      <p></p>
-  </section>
+<div class="weatherContainer">
+  <div id="currentWeatherDisplay"></div>
 </div>  
 
-<div class="wrap">
-  <section class="fiveDay-container">
-    <h3 id="fiveday">5-Day Forecast</h3>
-    <p></p>
-  </section>
-</div>
-
-  <script src="Assets/script.js"></script>
+<div class="fiveDay-container">
+  <div class="row"></div>
+    <div class="col"></div>
+  <div id="fiveday-forecast"></div>
+</div> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="Assets/js/script.js"></script>
 </body>
 
 </html>
